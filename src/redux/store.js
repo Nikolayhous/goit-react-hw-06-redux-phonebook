@@ -24,7 +24,8 @@ import storage from 'redux-persist/lib/storage';
 const contactsPersistConfig = {
     key: 'contacts',
     storage,
-    blacklist: ['filter'],
+    blacklist: ['filter'], //не допускать в локалсторедж
+    // whitelist: ['filter'], --допускать в локалторедж
 };
 
 const middleware = [
@@ -32,8 +33,7 @@ const middleware = [
         serializableCheck: {
             ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
-    }),
-    logger,
+    }).concat(logger),
 ];
 
 export const store = configureStore({

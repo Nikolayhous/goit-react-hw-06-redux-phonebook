@@ -34,13 +34,13 @@ import actions from './actions';
 // ---------------toolkit-redux-----------------
 
 const contactList = createReducer(initialContacts, {
-    [actions.addContact]: (state, actions) => [...state, actions.payload],
+    [actions.addContact]: (state, { payload }) => [...state, payload],
     [actions.deleteContact]: (state, { payload }) =>
-        state.filter(({ id }) => id !== payload),
+        state.filter(contact => contact.id !== payload),
 });
 
 const filter = createReducer('', {
-    [actions.filterContact]: (_, action) => action.payload,
+    [actions.filterContact]: (_, { payload }) => payload,
 });
 
 export default combineReducers({ contactList, filter });

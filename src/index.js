@@ -8,11 +8,11 @@ import { store, persistor } from './redux/store';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Provider store={store}>
-            <PersistGate loading={<h2>Loading</h2>} persistor={persistor}>
+        <PersistGate loading={<h2>Loading</h2>} persistor={persistor}>
+            <Provider store={store}>
                 <App />
-            </PersistGate>
-        </Provider>
+            </Provider>
+        </PersistGate>
     </React.StrictMode>,
     document.getElementById('root'),
 );
