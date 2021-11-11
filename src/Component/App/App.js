@@ -4,6 +4,7 @@ import Container from '../Container';
 import ContactForm from '../ContactForm/ContactForm';
 import Filter from '../Filter';
 import ContactList from '../ContactList';
+import Footer from '../Footer';
 // import initialContacts from '../../initialContacts.json';
 // import { HookLS } from '../../hookLS/hookLS';
 // import actions from '../../redux/phonebook/actions';
@@ -61,6 +62,7 @@ function App() {
             <h2 className={s.title}>Contacts</h2>
             <Filter />
             <ContactList />
+            <Footer />
         </Container>
     );
 }
