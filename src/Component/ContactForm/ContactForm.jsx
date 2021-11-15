@@ -114,14 +114,4 @@ function ContactForm() {
 
 // export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
 
-// ContactForm.propTypes = {
-//     onSubmit: PropTypes.func.isRequired,
-//     handleSubmit: PropTypes.func,
-//     handleChange: PropTypes.func,
-//     handleAgreeChange: PropTypes.func,
-//     nameId: PropTypes.number,
-//     numberId: PropTypes.number,
-//     agreeId: PropTypes.number,
-// };
-
 export default ContactForm;
